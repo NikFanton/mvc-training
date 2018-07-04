@@ -4,6 +4,6 @@
     <title>Test</title>
 </head>
 <body>
-    Hello from other view!
+    ${sum}
 </body>
 </html>

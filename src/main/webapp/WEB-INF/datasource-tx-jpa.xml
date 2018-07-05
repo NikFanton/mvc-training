@@ -16,10 +16,17 @@
         http://www.springframework.org/schema/data/jpa
         http://www.springframework.org/schema/data/jpa/spring-jpa.xsd">
 
-    <jdbc:embedded-database id="dataSource" type="H2">
-        <jdbc:script location="classpath:sql/init.sql"/>
-        <jdbc:script location="classpath:sql/test-data.sql"/>
-    </jdbc:embedded-database>
+    <!--<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">-->
+        <!--<property name="driverClassName" value="com.mysql.jdbc.Driver" />-->
+        <!--<property name="url" value="jdbc:mysql://localhost:3306/test" />-->
+        <!--<property name="username" value="" />-->
+        <!--<property name="password" value="" />-->
+    <!--</bean>-->
+
+    <!--<jdbc:embedded-database id="dataSource" type="H2">-->
+        <!--<jdbc:script location="classpath:sql/init.sql"/>-->
+        <!--<jdbc:script location="classpath:sql/test-data.sql"/>-->
+    <!--</jdbc:embedded-database>-->
 
     <bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
         <property name="entityManagerFactory" ref="emf"/>
@@ -36,7 +43,7 @@
         <property name="packagesToScan" value="ua.training"/>
         <property name="jpaProperties">
             <props>
-                <prop key="hibernate.dialect">org.hibernate.dialect.H2Dialect</prop>
+                <prop key="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</prop>
                 <prop key="hibernate.max_fetch_depth">3</prop>
                 <prop key="hibernate.jdbc.fetch_size">50</prop>
                 <prop key="hibernate.jdbc.batch_size">10</prop>

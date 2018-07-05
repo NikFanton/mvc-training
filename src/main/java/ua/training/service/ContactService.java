@@ -1,4 +1,11 @@
 package ua.training.service;
 
-public class ContactService {
+import ua.training.entity.Contact;
+
+import java.util.List;
+
+public interface ContactService {
+    List<Contact> findAll();
+    Contact findById(Long id);
+    Contact save(Contact contact);
 }

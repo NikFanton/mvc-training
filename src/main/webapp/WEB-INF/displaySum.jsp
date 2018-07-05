@@ -5,5 +5,6 @@
 </head>
 <body>
     ${sum}
+    ${contacts}
 </body>
 </html>

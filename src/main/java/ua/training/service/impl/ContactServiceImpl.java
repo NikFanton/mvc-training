@@ -10,7 +10,6 @@ import ua.training.entity.Contact;
 import ua.training.service.ContactService;
 
 import java.util.List;
-import java.util.NoSuchElementException;
 
 @Repository
 @Transactional
@@ -19,16 +18,15 @@ public class ContactServiceImpl implements ContactService {
     private ContactRepository contactRepository;
 
     @Override
-    @Transactional(readOnly = true)
+    @Transactional(readOnly=true)
     public List<Contact> findAll() {
         return Lists.newArrayList(contactRepository.findAll());
     }
 
     @Override
-    @Transactional(readOnly = true)
+    @Transactional(readOnly=true)
     public Contact findById(Long id) {
-        return contactRepository.findById(id)
-                .orElseThrow(NoSuchElementException::new);
+        return contactRepository.findOne(id);
     }
 
     @Override

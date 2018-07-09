@@ -25,8 +25,6 @@ public class ContactController {
         List<Contact> contacts = contactService.findAll();
         model.addAttribute("contacts", contacts);
         logger.info("No. of contacts" + contacts.size());
-        System.out.println(contacts.size());
-        System.out.println(contacts);
         return "view/list";
     }
 

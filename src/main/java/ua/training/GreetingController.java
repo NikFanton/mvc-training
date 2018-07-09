@@ -25,11 +25,6 @@ public class GreetingController {
                                   @RequestParam("second") int second) {
         ModelAndView mav = new ModelAndView("view/displaySum");
         mav.addObject("sum", first + second);
-
-//        ContactService contactService = new ContactServiceImpl();
-//        System.out.println(contactService.findById(1L));
-//        mav.addObject("contacts", contactService.findAll());
-//        String date = jdbcTemplate.queryForObject("select birth_date from contact limit 1;", String.class);
         return mav;
     }
 }

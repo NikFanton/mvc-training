@@ -8,9 +8,12 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>$Title$</title>
+    <title>Show Contact</title>
 </head>
 <body>
-$END$
+    ${contact.id}
+    ${contact.firstName}
+    ${contact.lastName}
+    ${contact.birthDate.toLocalDate()}
 </body>
 </html>

@@ -3,10 +3,10 @@
         "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
 <tiles-definitions>
     <definition extends="default" name="contacts/list">
-        <put-attribute name="body" value="/WEB-INF/views/contacts/list.jspx" />
+        <put-attribute name="body" value="/WEB-INF/views/contacts/list.jsp" />
     </definition>
     <definition extends="default" name="contacts/show">
-        <put-attribute name="body" value="/WEB-INF/views/contacts/show.jspx" />
+        <put-attribute name="body" value="/WEB-INF/views/contacts/show.jsp" />
     </definition>
     <definition extends="default" name="contacts/update">
         <put-attribute name="body" value="/WEB-INF/views/contacts/edit.jspx" />

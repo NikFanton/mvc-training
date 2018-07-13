@@ -1,13 +1,13 @@
-package ua.training.service.impl;
+package ua.training.model.service.impl;
 
 import com.google.common.collect.Lists;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import ua.training.ContactRepository;
-import ua.training.entity.Contact;
-import ua.training.service.ContactService;
+import ua.training.model.dao.ContactRepository;
+import ua.training.model.entity.Contact;
+import ua.training.model.service.ContactService;
 
 import java.util.List;
 

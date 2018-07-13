@@ -1,4 +1,8 @@
 package ua.training.model.dao;
 
-public class UserRepository {
+import org.springframework.data.jpa.repository.JpaRepository;
+import ua.training.model.entity.User;
+
+public interface UserRepository extends JpaRepository<User, Long> {
+    User findByUsername(String username);
 }

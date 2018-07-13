@@ -1,14 +1,7 @@
-package net.proselyte.springsecurityapp.model;
+package ua.training.model.entity;
 
 import javax.persistence.*;
 import java.util.Set;
-
-/**
- * Simple JavaBean domain object that represents a User.
- *
- * @author Eugene Suleimanov
- * @version 1.0
- */
 
 @Entity
 @Table(name = "users")

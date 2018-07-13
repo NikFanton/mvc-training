@@ -1,4 +1,5 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 <%--
   Created by IntelliJ IDEA.
   User: Mykyta_Huchenko
@@ -12,6 +13,30 @@
     <title>List</title>
 </head>
 <body>
+    <div id="menu">
+        <sec:authorize access="isAnonymous()">
+            <div id="login">
+                <form name="loginForm" action="${loginUrl}" method="post">
+                    <tаble>
+                        <tr>
+                            <td>Login:</td>
+                            <td><input type="text" name="j_username"/></td>
+                        </tr>
+                        <tr>
+                            <td>Password:</td>
+                            <td><input type="password" name="j_password"/></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" align="center"><input name="submit"
+                                                                  type="submit"
+                                                                  value="Login">
+                            </td>
+                        </tr>
+                    </tаble>
+                </form>
+            </div>
+        </sec:authorize>
+    </div>
     <c:if test="${not empty contacts}">
         <table>
             <thead>
@@ -34,7 +59,5 @@
             </tbody>
         </table>
     </c:if>
-
-
 </body>
 </html>

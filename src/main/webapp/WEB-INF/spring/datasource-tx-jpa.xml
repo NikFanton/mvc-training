@@ -53,12 +53,5 @@
                       entity-manager-factory-ref="emf"
                       transaction-manager-ref="transactionManager"/>
 
-    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-        <property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>
-        <property name="prefix" value="/WEB-INF/"/>
-        <property name="suffix" value=".jsp"/>
-    </bean>
-
     <context:annotation-config/>
-    <context:component-scan base-package="ua.training"/>
 </beans>

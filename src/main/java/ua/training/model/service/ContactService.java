@@ -1,6 +1,6 @@
-package ua.training.service;
+package ua.training.model.service;
 
-import ua.training.entity.Contact;
+import ua.training.model.entity.Contact;
 
 import java.util.List;
 

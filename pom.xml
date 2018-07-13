@@ -14,8 +14,9 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>1.7</maven.compiler.source>
     <maven.compiler.target>1.7</maven.compiler.target>
-    <org.springframework-version>4.3.2.RELEASE</org.springframework-version>
-    <springdata.version>1.10.2.RELEASE</springdata.version>
+    <springframework.version>4.3.2.RELEASE</springframework.version>
+    <spring.data.version>1.10.2.RELEASE</spring.data.version>
+    <spring.security.version>3.2.1.RELEASE</spring.security.version>
   </properties>
 
   <dependencies>
@@ -23,7 +24,7 @@
       <dependency>
           <groupId>org.springframework</groupId>
           <artifactId>spring-context</artifactId>
-          <version>${org.springframework-version}</version>
+          <version>${springframework.version}</version>
           <exclusions>
               <!-- Exclude Commons Logging in favor of SLF4j -->
               <exclusion>
@@ -35,12 +36,12 @@
       <dependency>
           <groupId>org.springframework</groupId>
           <artifactId>spring-webmvc</artifactId>
-          <version>${org.springframework-version}</version>
+          <version>${springframework.version}</version>
       </dependency>
       <dependency>
           <groupId>org.springframework</groupId>
           <artifactId>spring-tx</artifactId>
-          <version>${org.springframework-version}</version>
+          <version>${springframework.version}</version>
       </dependency>
       <dependency>
           <groupId>org.springframework</groupId>
@@ -51,19 +52,44 @@
       <dependency>
           <groupId>org.springframework</groupId>
           <artifactId>spring-orm</artifactId>
-          <version>${org.springframework-version}</version>
+          <version>${springframework.version}</version>
       </dependency>
 
       <dependency>
           <groupId>org.springframework</groupId>
           <artifactId>spring-beans</artifactId>
-          <version>${org.springframework-version}</version>
+          <version>${springframework.version}</version>
       </dependency>
 
       <dependency>
           <groupId>org.springframework.data</groupId>
           <artifactId>spring-data-jpa</artifactId>
-          <version>${springdata.version}</version>
+          <version>${spring.data.version}</version>
+      </dependency>
+
+      <!-- Spring Security -->
+      <dependency>
+          <groupId>org.springframework.security</groupId>
+          <artifactId>spring-security-core</artifactId>
+          <version>${spring.security.version}</version>
+      </dependency>
+
+      <dependency>
+          <groupId>org.springframework.security</groupId>
+          <artifactId>spring-security-web</artifactId>
+          <version>${spring.security.version}</version>
+      </dependency>
+
+      <dependency>
+          <groupId>org.springframework.security</groupId>
+          <artifactId>spring-security-config</artifactId>
+          <version>${spring.security.version}</version>
+      </dependency>
+
+      <dependency>
+          <groupId>org.springframework.security</groupId>
+          <artifactId>spring-security-taglibs</artifactId>
+          <version>${spring.security.version}</version>
       </dependency>
 
       <!-- google-collections -->

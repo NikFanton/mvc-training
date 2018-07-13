@@ -1,4 +1,4 @@
-package ua.training.model;
+package ua.training.model.dao;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import ua.training.model.entity.Role;
